@@ -6,10 +6,12 @@ Vue.use(Router);
 
 import demoRouters from './demo';
 import homeRouters from './home';
+import vehicleControlRouters from './vehicleControl';
 import error_404 from '@/view/errPage/404'
 
 const routes = [
     ...demoRouters,
+    ...vehicleControlRouters,
     ...homeRouters,
     {
         path: '/404',
@@ -27,7 +29,7 @@ const routes = [
     {
         // 会匹配所有路径，匹配失败跳转404
         path: '*',
-        redirect:'404'
+        redirect: '404'
     }
 ];
 
@@ -37,7 +39,7 @@ const router = new Router({
     routes,
     scrollBehavior() {
         // return 期望滚动到哪个的位置
-        return { x: 0, y: 0 }
+        return {x: 0, y: 0}
     }
 });
 
@@ -47,8 +49,8 @@ router.beforeEach((to, from, next) => {
         document.title = to.meta.title
     }
     next();
-})
+});
 
-export { routes }
+export {routes}
 
 export default router;

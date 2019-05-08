@@ -20,3 +20,10 @@ export default {
     }
 }
 </script>
+
+<style lang="less" scoped>
+    h2{
+        height: 16px;
+    }
+</style>
+

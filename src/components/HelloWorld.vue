@@ -12,18 +12,21 @@
         <van-button type="info">信息按钮</van-button>
         <van-button type="warning">警告按钮</van-button>
         <van-button type="danger">危险按钮</van-button>
-        <van-circle
-                v-model="currentRate"
-                color="#07c160"
-                fill="#fff"
-                size="120px"
-                layer-color="#ebedf0"
-                :text="text"
-                :rate="100"
-                :speed="100"
-                :clockwise="false"
-                :stroke-width="60"
-        />
+        <div>
+            <van-circle
+                    v-model="currentRate"
+                    color="#07c160"
+                    fill="#fff"
+                    size="120px"
+                    layer-color="#ebedf0"
+                    :text="text"
+                    :rate="100"
+                    :speed="100"
+                    :clockwise="false"
+                    :stroke-width="60"
+            />
+        </div>
+
     </div>
 </template>
 
@@ -38,7 +41,7 @@
         },
         data() {
             return {
-                currentRate:10
+                currentRate: 10
             }
         },
         computed: {
